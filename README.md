@@ -63,8 +63,8 @@ var myfun = function (o) { console.log('help ' + o); },
  3. **Remove functions**.
 
  ```javascript
- eventpublish.rmFn(myfun);
- eventpublish.fire(); // [nothing happens]
+ onChangeHook.rmFn(myfun);
+ onChangeHook.fire(); // [nothing happens]
  ```
 
 ---------------------------------------------------------
