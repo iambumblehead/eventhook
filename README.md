@@ -1,8 +1,6 @@
 eventhook
 =========
-**(c)[Bumblehead][0], 2013** [MIT-license](#license)  
-
-### Overview:
+**(c)[Bumblehead][0], 2013-2015** [MIT-license](#license)
 
 An object through which callbacks may be added and called through publish/subscribe model.
 
@@ -13,68 +11,39 @@ with strings, see [eventpublish][1].
 [1]: https://github.com/iambumblehead/eventpublish         "eventhook"
 
 ---------------------------------------------------------
-#### <a id="install"></a>Install:
+#### <a id="install"></a>install
 
 eventhook may be downloaded directly or installed through `npm`.
 
- * **npm**   
-
- ```bash
- $ npm install eventhook
- ```
-
- * **Direct Download**
- 
- ```bash  
- $ git clone https://github.com/iambumblehead/eventhook.git
- ```
-
----------------------------------------------------------
-#### <a id="test"></a>Test:
-
- to run tests, use `npm test` from a shell.
-
- ```bash
- $ npm test
- ```
-
----------------------------------------------------------
-#### <a id="get-started">GET STARTED:
-
-Create a function before starting.
-
-```
-var myfun = function (o) { console.log('help ' + o); },
-    onChangeHook = eventhook.getNew();
+```bash
+$ npm install eventhook
 ```
 
- 1. **Add functions** with an associated event name.
+to run tests, use `npm test` from a shell.
 
- ```javascript
- onChangeHook.addFn(myfun);
- ```
-
- 2. **Call functions** assocated with event, pass parameters to them.
-
- ```javascript
- onChangeHook.fire('me!'); // help me!
- ```
-
- 3. **Remove functions**.
-
- ```javascript
- onChangeHook.rmFn(myfun);
- onChangeHook.fire(); // [nothing happens]
- ```
+```bash
+$ npm test
+```
 
 ---------------------------------------------------------
-#### <a id="license">License:
+#### <a id="get-started">eventhook
 
+```
+var fn = function (o) { console.log('help ' + o); };
+var onChangeHook = eventhook();
+
+onChangeHook.addFn(myfun);
+onChangeHook.fire('me!'); // help me!
+onChangeHook.rmFn(myfun);
+onChangeHook.fire(); // [nothing happens]
+```
+
+#### <a id="license">license
  ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png) 
 
 (The MIT License)
 
-Copyright (c) 2013 [Bumblehead][0] <chris@bumblehead.com>
+Copyright (c) 2013-2015 [Bumblehead][0] <chris@bumblehead.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

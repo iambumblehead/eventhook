@@ -4,9 +4,9 @@
 
 var eventhook = require('../eventhook');
 
-describe("eventhook.getNew", function () {
+describe("eventhook", function () {
   it("should return an eventhook object", function () {
-    var ehook = eventhook.getNew();
+    var ehook = eventhook();
 
     expect( Array.isArray(ehook.fnArr) ).toBe( true );
   });
@@ -14,7 +14,7 @@ describe("eventhook.getNew", function () {
 
 describe("ehook.addFn", function () {
   it("should add a function", function () {
-    var ehook = eventhook.getNew(),
+    var ehook = eventhook(),
         testval = 0,
         testFn = function () { testval = 5; };
 
@@ -24,7 +24,7 @@ describe("ehook.addFn", function () {
   });
 
   it("should not add anything not a function", function () {
-    var ehook = eventhook.getNew(),
+    var ehook = eventhook(),
         testval = 0,
         testFn = 0;
 
@@ -36,7 +36,7 @@ describe("ehook.addFn", function () {
 
 describe("ehook.fire", function () {
   it("should call added functions", function () {  
-    var ehook = eventhook.getNew(),
+    var ehook = eventhook(),
         testval = 0,
         testFn = function () { testval += 5; },
         testFn2 = function () { testval += 2; };
@@ -53,7 +53,7 @@ describe("ehook.fire", function () {
 
 describe("ehook.rmFn", function () {
   it("should call remove added functions", function () {  
-    var ehook = eventhook.getNew(),
+    var ehook = eventhook(),
         testFn = function () { };
 
     ehook.addFn(testFn);
