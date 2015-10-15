@@ -28,7 +28,7 @@ $ npm test
 ---------------------------------------------------------
 #### <a id="get-started">eventhook
 
-```
+```javascript
 var fn = function (o) { console.log('help ' + o); };
 var onChangeHook = eventhook();
 
@@ -38,6 +38,7 @@ onChangeHook.rmFn(myfun);
 onChangeHook.fire(); // [nothing happens]
 ```
 
+---------------------------------------------------------
 #### <a id="license">license
  ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png) 
 
