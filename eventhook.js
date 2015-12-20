@@ -1,10 +1,9 @@
 // Filename: eventhook.js
-// Timestamp: 2013.10.30-10:51:34 (last modified)  
+// Timestamp: 2015.12.20-00:06:10 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)
-// Requires:
 
 
-var eventhook = ((typeof module === 'object') ? module : {}).exports = (function (p) {
+var eventhook = module.exports = (function (p) {
 
   var incrnum = 0;
   var proto = {
