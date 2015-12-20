@@ -1,6 +1,6 @@
 {
   "name": "eventhook",
-  "main" : "eventhook"
+  "main" : "eventhook",
   "version": "0.0.6",
   "license" : "MIT",
   "repository": {
